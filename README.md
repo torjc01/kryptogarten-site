@@ -2,22 +2,29 @@
 
 ## Dockerizaçao do site 
 
-Faça o build da imagem 
+Construçao da aplicaçao e criacao da imagem que será publicada no docker hub. 
+
+A aplicaçao executará na porta 4000, conforme o parâmetro -p do comando docker run. 
+
+
+- Faça o build da imagem e a publica no `docker hub`:
 
 ```bash
-docker build . -t kryptogarten
+docker build . -t juliozohar/kryptogarten:1.0
+
+docker push juliozohar/kryptogarten:1.0
 ```
 
-Execute o container 
+- Execute o container 
 
 ```bash
-docker run -p 4000:4000 kryptogarten
+docker run -d -p 4000:3000 juliozohar/kryptogarten:1.0
 ```
 
-Acesse a aplicacao via browser pelo endereço : http://localhost:4000
+- Acesse a aplicacao via browser pelo endereço : http://localhost:4000
 
-Para acessar a estrutura do container docker: 
+Para acessar a estrutura do container docker
 
 ```bash
-docker exec -it kryptogarten /bin/sh
+docker exec -it juliozohar/kryptogarten:1.0 /bin/sh
 ```
