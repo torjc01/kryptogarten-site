@@ -23,7 +23,7 @@ docker run -d -p 4000:3000 juliozohar/kryptogarten:1.0
 
 - Acesse a aplicacao via browser pelo endereço : http://localhost:4000
 
-Para acessar a estrutura do container docker
+Para acessar a estrutura de arquivos do container criado: 
 
 ```bash
 docker exec -it juliozohar/kryptogarten:1.0 /bin/sh
